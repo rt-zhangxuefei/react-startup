@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "description": "node服务器端程序（参考）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "serve-favicon": "^2.5.0"
+  }
+}
