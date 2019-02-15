@@ -5,6 +5,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import createSagaMiddleware from 'redux-saga'
 import { Provider } from 'react-redux'
 
+import './global.css'
 import rootSaga from './sagas/index'
 import rootReducer from './reducers'
 import App from './App'
