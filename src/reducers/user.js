@@ -5,7 +5,7 @@ import {
 } from '../constants/user'
 
 const initialState = {
-  isFetching: false,
+  loading: false,
   error: null,
   user: null
 }
@@ -14,19 +14,19 @@ const user = (state = initialState, action = {}) => {
   switch (action.type) {
     case FETCH_USER_REQUEST:
       return {
-        isFetching: true,
+        loading: true,
         error: null,
         user: null
       }
     case FETCH_USER_SUCCESS:
       return {
-        isFetching: false,
+        loading: false,
         error: null,
         user: action.user
       }
     case FETCH_USER_FAILURE:
       return {
-        isFetching: false,
+        loading: false,
         error: action.error,
         user: null
       }

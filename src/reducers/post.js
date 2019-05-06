@@ -2,37 +2,37 @@ import {
   FETCH_POST_FAILURE,
   FETCH_POST_REQUEST,
   FETCH_POST_SUCCESS
-} from '../constants/post'
+} from '../constants/post';
 
 const initialState = {
-  isFetching: false,
+  loading: false,
   error: null,
   post: null
-}
+};
 
 const post = (state = initialState, action = {}) => {
   switch (action.type) {
     case FETCH_POST_REQUEST:
       return {
-        isFetching: true,
+        loading: true,
         error: null,
         post: null
-      }
+      };
     case FETCH_POST_SUCCESS:
       return {
-        isFetching: false,
+        loading: false,
         error: null,
         post: action.post
-      }
+      };
     case FETCH_POST_FAILURE:
       return {
-        isFetching: false,
+        loading: false,
         error: action.error,
         post: null
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default post
+export default post;
