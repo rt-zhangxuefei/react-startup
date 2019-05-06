@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect
-} from 'react-router-dom'
-import Index from './containers/Index/Index'
+} from 'react-router-dom';
+import { CONTEXT } from './config';
+import Index from './containers/Index/Index';
 
 class App extends Component {
   render() {
@@ -13,11 +14,11 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/index" />} />
-          <Route path={`/index`} component={Index} />
+          <Route path={`${CONTEXT}/index`} component={Index} />
         </Switch>
       </Router>
-    )
+    );
   }
 }
 
-export default App
+export default App;
