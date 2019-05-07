@@ -34,7 +34,10 @@ app.use(
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'build'), options));
+app.use(
+  `${config.CONTEXT}/static`,
+  express.static(path.join(__dirname, 'build', 'static'), options)
+);
 
 app.use(`${config.CONTEXT}/*`, (req, res, next) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
