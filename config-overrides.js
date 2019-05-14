@@ -1,4 +1,4 @@
-const { override, fixBabelImports, addLessLoader } = require('customize-cra')
+const { override, fixBabelImports, addLessLoader } = require('customize-cra');
 // 集成antd
 // module.exports = override(
 //   fixBabelImports('import', {
@@ -11,4 +11,4 @@ const { override, fixBabelImports, addLessLoader } = require('customize-cra')
 //     modifyVars: { '@primary-color': '#1890ff' }
 //   })
 // )
-module.exports = override(addLessLoader())
+module.exports = override(addLessLoader());
