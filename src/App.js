@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import { CONTEXT } from './config';
-import Index from './containers/Index/Index';
+import Index from './pages/Index/Index';
 
 class App extends Component {
   render() {
