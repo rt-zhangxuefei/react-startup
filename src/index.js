@@ -9,6 +9,7 @@ import './index.css';
 import rootSaga from './sagas/index';
 import rootReducer from './reducers';
 import App from './App';
+import * as serviceWorkder from './serviceWorker'
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
@@ -24,3 +25,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+serviceWorkder.unregister()
