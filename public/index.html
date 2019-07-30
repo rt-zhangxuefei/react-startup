@@ -17,6 +17,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script>
+      // 根据设计给的标准宽度（375px or 360px） 开发时 蓝湖开发平台选择 像素 root font-size:100px  1rem = 100px
+      // void (function(w) {
+      //   var d = w.document,
+      //     de = d.documentElement,
+      //     dpr = w.devicePixelRatio || 1,
+      //     e = 'orientationchange' in w ? 'orientationchange' : 'resize',
+      //     setFont = function() {
+      //       var dw = de.getBoundingClientRect().width || 375;
+      //       (Number(dpr) === 1 || dw > 750) && (dw = 720),
+      //         (de.style.fontSize = dw / 7.5 + 'px');
+      //     };
+      //   de.setAttribute('data-dpr', dpr),
+      //     d.addEventListener &&
+      //       (w.addEventListener(e, setFont, false),
+      //       d.readyState === 'complete' ||
+      //         d.addEventListener(
+      //           'DOMContentLoaded',
+      //           function() {
+      //             setTimeout(setFont);
+      //           },
+      //           false
+      //         ));
+      // })(window);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
