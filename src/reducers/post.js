@@ -22,12 +22,12 @@ const post = (state = initialState, action = {}) => {
       return {
         loading: false,
         error: null,
-        post: action.post
+        post: action.payload
       };
     case FETCH_POST_FAILURE:
       return {
         loading: false,
-        error: action.error,
+        error: action.payload,
         post: null
       };
     default:

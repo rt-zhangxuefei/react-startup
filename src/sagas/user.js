@@ -1,4 +1,4 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
+import { takeLeading, call, put } from 'redux-saga/effects';
 import axios from 'axios';
 import {
   FETCH_USER_SUCCESS,
@@ -12,14 +12,12 @@ function* fetchOneUser() {
       axios.get,
       `https://jsonplaceholder.typicode.com/users`
     );
-    yield put({ type: FETCH_USER_SUCCESS, user: response.data[0] });
+    yield put({ type: FETCH_USER_SUCCESS, payload: response.data[0] });
   } catch (e) {
-    yield put({ type: FETCH_USER_FAILURE, error: e.message });
+    yield put({ type: FETCH_USER_FAILURE, payload: e });
   }
 }
 
-function* watchFetchUser() {
-  yield takeLatest(FETCH_USER_REQUEST, fetchOneUser);
+export function* watchFetchUser() {
+  yield takeLeading(FETCH_USER_REQUEST, fetchOneUser);
 }
-
-export const userSagas = [watchFetchUser()];

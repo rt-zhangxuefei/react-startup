@@ -22,12 +22,12 @@ const user = (state = initialState, action = {}) => {
       return {
         loading: false,
         error: null,
-        user: action.user
+        user: action.payload
       };
     case FETCH_USER_FAILURE:
       return {
         loading: false,
-        error: action.error,
+        error: action.payload,
         user: null
       };
     default:

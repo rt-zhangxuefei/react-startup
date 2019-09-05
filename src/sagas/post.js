@@ -1,4 +1,4 @@
-import { takeLatest, call, put } from 'redux-saga/effects';
+import { takeLeading, call, put } from 'redux-saga/effects';
 import axios from 'axios';
 import {
   FETCH_POST_REQUEST,
@@ -12,14 +12,12 @@ function* fetchPostByPage({ pageIndex }) {
       axios.get,
       `https://jsonplaceholder.typicode.com/posts/${pageIndex}`
     );
-    yield put({ type: FETCH_POST_SUCCESS, post: response.data });
+    yield put({ type: FETCH_POST_SUCCESS, payload: response.data });
   } catch (e) {
-    yield put({ type: FETCH_POST_FAILURE, error: e.message });
+    yield put({ type: FETCH_POST_FAILURE, payload: e });
   }
 }
 
-function* watchFetchPostByPage() {
-  yield takeLatest(FETCH_POST_REQUEST, fetchPostByPage);
+export function* watchFetchPostByPage() {
+  yield takeLeading(FETCH_POST_REQUEST, fetchPostByPage);
 }
-
-export const postSagas = [watchFetchPostByPage()];
