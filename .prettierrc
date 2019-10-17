@@ -1,3 +1,7 @@
 {
-  "singleQuote": true
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.proseWrap": "never"
 }
