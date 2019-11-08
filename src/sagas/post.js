@@ -1,4 +1,4 @@
-import { takeLeading, call, put } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 import axios from 'axios';
 import {
   FETCH_POST_REQUEST,
@@ -19,5 +19,5 @@ function* fetchPostByPage({ pageIndex }) {
 }
 
 export function* watchFetchPostByPage() {
-  yield takeLeading(FETCH_POST_REQUEST, fetchPostByPage);
+  yield takeLatest(FETCH_POST_REQUEST, fetchPostByPage);
 }

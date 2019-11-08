@@ -1,4 +1,4 @@
-import { takeLeading, call, put } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 import axios from 'axios';
 import {
   FETCH_USER_SUCCESS,
@@ -19,5 +19,5 @@ function* fetchOneUser() {
 }
 
 export function* watchFetchUser() {
-  yield takeLeading(FETCH_USER_REQUEST, fetchOneUser);
+  yield takeLatest(FETCH_USER_REQUEST, fetchOneUser);
 }

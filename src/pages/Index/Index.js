@@ -1,54 +1,43 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getOneUser } from '../../actions/user';
-import { getPostByPage } from '../../actions/post';
-import Header from '../../components/Header';
-import styles from './Index.module.less';
+import React, { memo, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { createSelector } from "reselect";
+import { getPostByPage } from "../../actions/post";
+import { getOneUser } from "../../actions/user";
+import Header from "../../components/Header";
+import styles from "./Index.module.less";
 
-class Index extends Component {
-  render() {
-    const { user, post, getOneUser, getPostByPage } = this.props;
-    return (
-      <div className={styles.index}>
-        <Header />
+const selectUser = createSelector(
+  state => state,
+  state => state.user
+);
+const selectPost = createSelector(
+  state => state,
+  state => state.post
+);
 
-        <button
-          onClick={() => {
-            getOneUser();
-          }}
-        >
-          获取一个用户
-        </button>
-        <p>
-          {user.isFetching
-            ? 'loading...'
-            : user.user && JSON.stringify(user.user)}
-        </p>
-        <button
-          onClick={() => {
-            getPostByPage(1);
-          }}
-        >
-          获取一篇文章
-        </button>
-        <p>
-          {post.isFetching
-            ? 'loading...'
-            : post.post && JSON.stringify(post.post)}
-        </p>
-      </div>
-    );
-  }
+function Index() {
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+  const post = useSelector(selectPost);
+  const handleGetUser = useCallback(() => {
+    dispatch(getOneUser());
+  }, [dispatch]);
+  return (
+    <div className={styles.index}>
+      <Header />
+
+      <button onClick={handleGetUser}>获取用户</button>
+      <p>{user.users && JSON.stringify(user.users)}</p>
+      <button
+        onClick={() => {
+          dispatch(getPostByPage(1));
+        }}
+      >
+        获取一篇文章
+      </button>
+      <p>{post.content && JSON.stringify(post.content)}</p>
+    </div>
+  );
 }
 
-const mapStateToProps = state => {
-  return {
-    user: state.user,
-    post: state.post
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  { getOneUser, getPostByPage }
-)(Index);
+export default memo(Index);

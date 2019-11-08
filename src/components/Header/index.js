@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
-import styles from './index.module.less';
+import React, { memo } from "react";
+import styles from "./index.module.less";
 
-class Header extends Component {
-  state = {};
-  render() {
-    return (
-      <h3 className={styles.header}>React-Startup {process.env.NODE_ENV}</h3>
-    );
-  }
+function Header() {
+  return <h3 className={styles.header}>React-Startup</h3>;
 }
 
-export default Header;
+export default memo(Header);
