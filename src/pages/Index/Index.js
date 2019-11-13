@@ -1,18 +1,18 @@
-import React, { memo, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { createSelector } from "reselect";
-import { getPostByPage } from "../../actions/post";
-import { getOneUser } from "../../actions/user";
-import Header from "../../components/Header";
-import styles from "./Index.module.less";
+import React, { memo, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { createSelector } from 'reselect';
+import { getPostByPage } from '../../actions/post';
+import { getOneUser } from '../../actions/user';
+import Header from '../../components/Header';
+import styles from './Index.module.less';
 
 const selectUser = createSelector(
   state => state,
-  state => state.user
+  state => state.user,
 );
 const selectPost = createSelector(
   state => state,
-  state => state.post
+  state => state.post,
 );
 
 function Index() {
