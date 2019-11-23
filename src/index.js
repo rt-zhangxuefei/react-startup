@@ -9,13 +9,9 @@ import './index.less';
 import rootSaga from './sagas/index';
 import rootReducer from './reducers';
 import App from './App';
-import * as serviceWorkder from './serviceWorker'
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(sagaMiddleware))
-);
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(rootSaga);
 
@@ -23,7 +19,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
-
-serviceWorkder.unregister()

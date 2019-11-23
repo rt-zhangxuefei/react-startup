@@ -4,6 +4,7 @@ const proxy = require('http-proxy-middleware');
 const path = require('path');
 const compression = require('compression');
 const bodyParser = require('body-parser');
+
 const app = express();
 
 const config = require('./config');

@@ -4,7 +4,7 @@ import { FETCH_USER_SUCCESS, FETCH_USER_FAILURE, FETCH_USER_REQUEST } from '../c
 
 function* fetchOneUser() {
   try {
-    const response = yield call(axios.get, `https://jsonplaceholder.typicode.com/users`);
+    const response = yield call(axios.get, 'https://jsonplaceholder.typicode.com/users');
     yield put({ type: FETCH_USER_SUCCESS, payload: response.data[0] });
   } catch (e) {
     yield put({ type: FETCH_USER_FAILURE, payload: e });
