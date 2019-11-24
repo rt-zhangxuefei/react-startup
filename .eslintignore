@@ -2,3 +2,4 @@
 /config/
 /deployment/
 /src/setupProxy.js
+config-overrides.js
