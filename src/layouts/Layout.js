@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import './Layout.less';
 
 function Layout(props) {
+
   return (
     <div className="layout">
       <div className="layout-header">Header</div>
