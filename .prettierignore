@@ -1,4 +1,5 @@
 **/*.svg
+/build
 package.json
 .DS_Store
 .eslintignore
@@ -10,3 +11,6 @@ LICENSE
 .eslintcache
 *.lock
 yarn-error.log
+.env
+.gitattributes
+/public

@@ -1,4 +1,4 @@
-const { prettier } = require("@umijs/fabric");
+const { prettier } = require('@umijs/fabric');
 module.exports = {
-  ...prettier
+  ...prettier,
 };
