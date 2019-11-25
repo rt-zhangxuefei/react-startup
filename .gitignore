@@ -9,6 +9,8 @@
 yarn.lock
 package-lock.json
 
+.eslintcache
+
 # production
 /deployment
 /build
