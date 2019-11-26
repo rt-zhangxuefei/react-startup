@@ -14,4 +14,8 @@ LICENSE
 yarn-error.log
 *.png
 **/*.svg
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.gif
 *.lock
