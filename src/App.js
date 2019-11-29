@@ -6,14 +6,14 @@ import Layout from './layouts/Layout';
 
 function App() {
   return (
-    <Layout>
-      <Router>
+    <Router>
+      <Layout>
         <Switch>
           <Route exact path={`${CONTEXT}/`} render={() => <Redirect to="/index" />} />
           <Route path={`${CONTEXT}/index`} component={Index} />
         </Switch>
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   );
 }
 
