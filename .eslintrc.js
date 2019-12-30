@@ -1,5 +1,8 @@
-const { eslint } = require('@umijs/fabric');
-
 module.exports = {
-  ...eslint,
+  extends: [require.resolve('@umijs/fabric/dist/eslint')],
+  rules: {
+    // your rules
+    '@typescript-eslint/camelcase': 1,
+    'react/no-array-index-key': 1,
+  },
 };

@@ -1,4 +1,6 @@
-const { stylelint } = require('@umijs/fabric');
 module.exports = {
-  ...stylelint,
+  extends: [require.resolve('@umijs/fabric/dist/stylelint')],
+  rules: {
+    // your rules
+  },
 };
