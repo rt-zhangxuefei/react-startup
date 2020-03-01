@@ -1,5 +1,11 @@
-const proxy = require('http-proxy-middleware');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+const apiProxy = createProxyMiddleware(['/api'], {
+  target: 'http://localhost:3001/',
+  changeOrigin: true,
+  logLevel: 'debug',
+});
 
 module.exports = function(app) {
-  // app.use(proxy('/api', { target: 'http://localhost:3001/', changeOrigin:true, logLevel: 'debug' }))
+  // app.use(apiProxy)
 };
