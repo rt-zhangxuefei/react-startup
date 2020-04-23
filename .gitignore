@@ -6,9 +6,6 @@
 # testing
 /coverage
 
-yarn.lock
-package-lock.json
-
 .eslintcache
 
 # production
