@@ -4,11 +4,9 @@ import axios from 'axios';
 
 const TOKEN_HEADER = 'X-TOKEN';
 
-const instance = axios.create({
-  headers: { [TOKEN_HEADER]: window.localStorage.getItem(TOKEN_HEADER) || '' },
-});
+const instance = axios.create();
 
-instance.setToken = token => {
+instance.setToken = (token) => {
   instance.defaults.headers[TOKEN_HEADER] = token;
   window.localStorage.setItem(TOKEN_HEADER, token);
 };
@@ -26,34 +24,34 @@ async function getToken() {
 }
 
 instance.interceptors.response.use(
-  response => response,
-  error => {
+  (response) => response,
+  (error) => {
     if (error.response.status === 401) {
       const { config } = error.response;
       // token 过期
       if (!isRefreshing && retryTokenTimes < 3) {
         isRefreshing = true;
         return getToken()
-          .then(res => {
+          .then((res) => {
             isRefreshing = false;
             // 获取 token 成功
             retryTokenTimes = 0;
             instance.setToken(res);
             config.headers[TOKEN_HEADER] = res;
             // token 更新 执行过期请求队列
-            requestQueue.forEach(cb => cb(res));
+            requestQueue.forEach((cb) => cb(res));
             requestQueue = [];
             return instance(config);
           })
-          .catch(err => {
+          .catch((err) => {
             isRefreshing = false;
             retryTokenTimes += 1;
             console.log(`getToken catch error ${err.message}`);
           });
       }
       if (isRefreshing && retryTokenTimes < 3) {
-        return new Promise(resolve => {
-          requestQueue.push(token => {
+        return new Promise((resolve) => {
+          requestQueue.push((token) => {
             config.headers[TOKEN_HEADER] = token;
             resolve(instance(config));
           });
@@ -66,5 +64,18 @@ instance.interceptors.response.use(
     return Promise.reject(error);
   },
 );
+
+instance.interceptors.request.use((config) => {
+  // 可以记录请求开始的时间 响应里面上报 接口耗时
+  config.REQUEST_ID = Date.now();
+  // 请求REQUEST_ID url timestamp 上报
+  try {
+    config.headers[TOKEN_HEADER] = window.localStorage.getItem(TOKEN_HEADER) || '';
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  return config;
+});
 
 export default instance;
