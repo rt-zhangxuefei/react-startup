@@ -6,4 +6,4 @@
 - 包含 react(hooks),react-router,redux,redux-saga
 - 支持 css module less module
 - 样式文件名约定 .module.css,.module.less
-- 代码质量保障使用 @umijs/fabric husky lint-staged
+- 代码质量保障使用 @umijs/fabric husky  pretty-quick
