@@ -4,5 +4,6 @@ module.exports = {
     // your rules
     '@typescript-eslint/camelcase': 1,
     'react/no-array-index-key': 1,
+    'no-param-reassign': 0,
   },
 };
