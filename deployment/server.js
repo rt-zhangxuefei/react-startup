@@ -1,13 +1,19 @@
 const express = require('express');
 const favicon = require('serve-favicon');
-const proxy = require('http-proxy-middleware');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const path = require('path');
 const compression = require('compression');
 const bodyParser = require('body-parser');
+const config = require('./config');
 
 const app = express();
 
-const config = require('./config');
+const apiProxy = createProxyMiddleware([`${config.CONTEXT}/yourpath`, `${config.CONTEXT}/yourpath2`], {
+  pathRewrite: { [`^${config.CONTEXT}`]: '' },
+  target: config.API_HOST,
+  changeOrigin: true,
+});
+
 
 app.use(compression());
 app.use(config.CONTEXT, favicon(path.join(__dirname, 'build', 'favicon.ico')));
@@ -25,13 +31,7 @@ const options = {
 };
 
 // http代理
-app.use(
-  proxy([`${config.CONTEXT}/yourpath`, `${config.CONTEXT}/yourpath2`], {
-    pathRewrite: { [`^${config.CONTEXT}`]: '' },
-    target: config.API_HOST,
-    changeOrigin: true,
-  }),
-);
+app.use(apiProxy);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
