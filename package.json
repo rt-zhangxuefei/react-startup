@@ -16,6 +16,7 @@
     "pretty-quick": "pretty-quick",
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
+  "homepage": "",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
