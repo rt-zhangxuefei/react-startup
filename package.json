@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@umijs/fabric": "^2.1.0",
+    "antd-dayjs-webpack-plugin": "^1.0.0",
     "babel-plugin-import": "^1.13.0",
     "check-prettier": "^1.0.3",
     "customize-cra": "^1.0.0",
