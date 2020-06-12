@@ -1,6 +1,4 @@
-/build/
-/public/
-/deployment/
+/build
 package.json
 .eslintignore
 .editorconfig
@@ -8,11 +6,12 @@ package.json
 .prettierignore
 .gitattributes
 .env
+.env.development
+.env.production
 .DS_Store
 LICENSE
 .eslintcache
 yarn-error.log
-*.png
 **/*.svg
 **/*.jpg
 **/*.jpeg
