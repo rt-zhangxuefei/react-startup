@@ -1,13 +1,9 @@
 import React, { memo } from 'react';
-import './Layout.less';
+import ProLayout from '@ant-design/pro-layout';
+import styles from './Layout.less';
 
 function Layout(props) {
-  return (
-    <div className="layout">
-      <div className="layout-header">Header</div>
-      <div className="layout-content">{props.children}</div>
-    </div>
-  );
+  return <ProLayout className={styles.Layout}>{props.children}</ProLayout>;
 }
 
 export default memo(Layout);
