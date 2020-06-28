@@ -11,7 +11,6 @@ package.json
 .DS_Store
 LICENSE
 .eslintcache
-yarn-error.log
 **/*.svg
 **/*.jpg
 **/*.jpeg

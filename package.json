@@ -1,6 +1,6 @@
 {
   "name": "react-startup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "集成了 react-router，redux 的 react 单页应用项目脚手架",
   "license": "MIT",
   "scripts": {
