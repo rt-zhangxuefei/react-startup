@@ -6,12 +6,12 @@ import { getOneUser } from '../../actions/user';
 import styles from './Index.module.less';
 
 const selectUser = createSelector(
-  state => state,
-  state => state.user,
+  (state) => state,
+  (state) => state.user,
 );
 const selectPost = createSelector(
-  state => state,
-  state => state.post,
+  (state) => state,
+  (state) => state.post,
 );
 
 function Index() {
