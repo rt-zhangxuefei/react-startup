@@ -2,6 +2,7 @@
   "name": "react-startup",
   "version": "1.2.0",
   "description": "react单页应用项目脚手架",
+  "license": "MIT",
   "scripts": {
     "start": "craco start",
     "build": "craco build",

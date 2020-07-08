@@ -1,4 +1,4 @@
-# react-startup 脚手架
+# [react-startup 脚手架](https://github.com/rt-zhangxuefei/react-startup)
 
 - 基于 create-react-app Facebook 官方脚手架
 - 适用 react 单页应用项目开发
@@ -19,3 +19,7 @@
 [craco](https://github.com/rt-zhangxuefei/react-startup/blob/7994c3c906c7d1639ced278a20965919f987228f/README.md#L14)
 
 [Types Search](https://microsoft.github.io/TypeSearch/)
+
+# LICENCE
+
+MIT
