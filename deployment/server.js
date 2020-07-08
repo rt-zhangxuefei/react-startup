@@ -8,12 +8,14 @@ const config = require('./config');
 
 const app = express();
 
-const apiProxy = createProxyMiddleware([`${config.CONTEXT}/yourpath`, `${config.CONTEXT}/yourpath2`], {
-  pathRewrite: { [`^${config.CONTEXT}`]: '' },
-  target: config.API_HOST,
-  changeOrigin: true,
-});
-
+const apiProxy = createProxyMiddleware(
+  [`${config.CONTEXT}/yourpath`, `${config.CONTEXT}/yourpath2`],
+  {
+    pathRewrite: { [`^${config.CONTEXT}`]: '' },
+    target: config.API_HOST,
+    changeOrigin: true,
+  },
+);
 
 app.use(compression());
 app.use(config.CONTEXT, favicon(path.join(__dirname, 'build', 'favicon.ico')));
@@ -25,7 +27,7 @@ const options = {
   index: false,
   maxAge: '7d',
   redirect: false,
-  setHeaders: function(res, path, stat) {
+  setHeaders: function (res, path, stat) {
     res.set('x-timestamp', Date.now());
   },
 };
@@ -44,7 +46,7 @@ app.use(`${config.CONTEXT}/*`, (req, res, next) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(config.PORT, config.HOST, err => {
+app.listen(config.PORT, config.HOST, (err) => {
   if (!err) {
     console.log(`listening on http://${config.HOST}:${config.PORT}${config.CONTEXT}`);
   } else {

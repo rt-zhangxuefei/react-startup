@@ -1,6 +1,7 @@
 module.exports = {
-  extends: [require.resolve('@umijs/fabric/dist/stylelint')],
+  extends: ['stylelint-config-recommended'],
   rules: {
     // your rules
+    'block-no-empty': null,
   },
 };

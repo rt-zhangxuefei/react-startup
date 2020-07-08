@@ -1,4 +1,5 @@
 /build
+**/node_modules
 package.json
 .eslintignore
 .editorconfig
@@ -16,4 +17,5 @@ LICENSE
 **/*.jpeg
 **/*.png
 **/*.gif
+**/*.ico
 *.lock

@@ -2,8 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -13,29 +21,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-    <script>
-      // 根据设计给的标准宽度（1920px 750px 360px） 开发时 蓝湖开发平台选择 像素 root font-size:100px  1rem = 100px
-      // void (function(w){
-      //   var doc = w.document;
-      //   var docEl = doc.documentElement;
-      //   var dpr = w.devicePixelRatio || 1;
-      //   var ev = 'orientationchange' in w ? 'orientationchange' : 'resize';
-      //   var setRemSize = function(){
-      //     var deviceWidth = docEl.getBoundingClientRect().width || 1920;
-      //     deviceWidth > 1920 && (deviceWidth = 1920);
-      //     docEl.style.fontSize = deviceWidth / 19.2 + 'px';
-      //   }
-      //   setRemSize();
-      //   w.addEventListener(ev,setRemSize,false);
-      //   w.addEventListener('pageshow',function(e){
-      //     // 是否从微信缓存载入
-      //     if(e.persisted){
-      //       setRemSize();
-      //     }
-      //   })
-      // })(window);
-    </script>
+    <title>%REACT_APP_TITLE%</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
