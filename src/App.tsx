@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { CONTEXT } from './config';
-import Layout from './layouts/Layout';
+import BasicLayout from './layouts/BasicLayout';
 import PackageInfo from './pages/PackageInfo/PackageInfo';
 
 function App() {
   return (
     <Router>
-      <Layout>
+      <BasicLayout>
         <Switch>
           <Route exact path={`${CONTEXT}/`}>
             <PackageInfo></PackageInfo>
           </Route>
         </Switch>
-      </Layout>
+      </BasicLayout>
     </Router>
   );
 }
