@@ -1,6 +1,6 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WebpackBar = require('webpackbar');
-const CracoLessPlugin = require('craco-less');
+// const CracoLessPlugin = require('craco-less');
 const CracoAntDesignPlugin = require('craco-antd');
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 const path = require('path');
@@ -18,16 +18,16 @@ module.exports = {
     ],
   },
   plugins: [
-    {
-      plugin: CracoLessPlugin,
-      options: {
-        lessLoaderOptions: {
-          lessOptions: {
-            javascriptEnabled: true,
-          },
-        },
-      },
-    },
+    // {
+    //   plugin: CracoLessPlugin,
+    //   options: {
+    //     lessLoaderOptions: {
+    //       lessOptions: {
+    //         javascriptEnabled: true,
+    //       },
+    //     },
+    //   },
+    // },
     { plugin: AntdDayjsWebpackPlugin },
     {
       plugin: CracoAntDesignPlugin,
