@@ -1,6 +1,6 @@
 {
   "name": "react-startup",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "react单页应用项目脚手架",
   "license": "MIT",
   "scripts": {
@@ -41,7 +41,7 @@
     "react-scripts": "3.4.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.1.3",
-    "regenerator-runtime": "^0.13.5",
+    "regenerator-runtime": "^0.13.6",
     "reselect": "^4.0.0"
   },
   "browserslist": [
