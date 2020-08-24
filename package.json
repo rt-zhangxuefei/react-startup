@@ -29,6 +29,7 @@
     "axios": "^0.20.0",
     "classnames": "^2.2.6",
     "core-js": "^3.6.5",
+    "dayjs": "^1.8.34",
     "lodash-es": "^4.17.15",
     "omit.js": "^2.0.2",
     "path-to-regexp": "^6.1.0",
