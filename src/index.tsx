@@ -1,7 +1,5 @@
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
-// Date 组件locale
-// import 'moment/locale/zh-cn';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
