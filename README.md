@@ -2,7 +2,7 @@
 
 - 基于 create-react-app Facebook 官方脚手架
 - 适用 react 单页应用项目开发
-- fork craco（v5.8) 进行修改以后支持 CRA V4
+- fork craco（v5.9) 进行修改以后支持 CRA V4
 - 集成 react(hooks),react-router,redux,redux-saga,antd
 - 样式使用 less
 - 同时支持 es6 typescript（推荐） 开发组件
