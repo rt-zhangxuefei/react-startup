@@ -57,6 +57,9 @@ instance.interceptors.response.use(
           });
         });
       }
+      isRefreshing = false;
+      retryTokenTimes = 0;
+      requestQueue = [];
       return Promise.reject(
         new Error(`still get token failed after retry 3 times ! fatal error=${error.message} `),
       );
