@@ -15,10 +15,7 @@ module.exports = {
       ...(process.env.NODE_ENV === 'development'
         ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
         : []),
-      new ESLintPlugin({
-        extensions: ['react-app', 'prettier'],
-        exclude: ['/build', '/craco', '/deploy', '/src/setupProxy.js', '.*.js'],
-      }),
+      new ESLintPlugin(),
     ],
   },
   plugins: [
