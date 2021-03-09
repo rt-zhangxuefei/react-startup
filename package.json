@@ -13,14 +13,9 @@
     "lint:prettier": "prettier --check \"**/*\" --end-of-line auto",
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "prettier": "prettier -c --write \"**/*\"",
-    "pretty-quick": "pretty-quick",
+    "pretty-quick": "pretty-quick --staged",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "homepage": "",
   "dependencies": {
