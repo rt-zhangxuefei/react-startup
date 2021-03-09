@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const TOKEN_HEADER = 'X-TOKEN';
 
-const instance = axios.create();
+const instance = axios.create() as any;
 
 instance.setToken = (token) => {
   instance.defaults.headers[TOKEN_HEADER] = token;
