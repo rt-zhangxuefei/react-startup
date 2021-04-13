@@ -9,7 +9,7 @@ const initState: PackageState = {
   packageInfo: undefined,
 };
 
-export default (state = initState, action: PackageAction) => {
+const reducer = (state = initState, action: PackageAction) => {
   switch (action.type) {
     case GET_PACKAGEINFO_SUCCESS:
       return {
@@ -23,3 +23,5 @@ export default (state = initState, action: PackageAction) => {
       return state;
   }
 };
+
+export default reducer;
