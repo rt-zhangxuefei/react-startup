@@ -1,5 +1,4 @@
 const express = require('express');
-const favicon = require('serve-favicon');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const path = require('path');
 const compression = require('compression');
@@ -18,7 +17,6 @@ const apiProxy = createProxyMiddleware(
 );
 
 app.use(compression());
-app.use(config.CONTEXT, favicon(path.join(__dirname, 'build', 'favicon.ico')));
 
 const options = {
   dotfiles: 'ignore',
