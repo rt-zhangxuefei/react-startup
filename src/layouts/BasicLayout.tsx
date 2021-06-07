@@ -1,10 +1,8 @@
-import { Layout } from 'antd';
-import { LayoutProps } from 'antd/lib/layout';
-import React, { FC, memo } from 'react';
+import { FC, memo } from 'react';
 import './BasicLayout.less';
 
-const BasicLayout: FC<LayoutProps> = (props) => {
-  return <Layout style={{ minHeight: '100vh' }}>{props.children}</Layout>;
+const BasicLayout: FC<any> = (props) => {
+  return <div className="BasicLayout">{props.children}</div>;
 };
 
 export default memo(BasicLayout);
