@@ -17,7 +17,7 @@ function* getPackageInfo({ pkgName }: PackageSagaAction) {
       payload: { starsCount, forksCount },
     });
   } catch (error) {
-    yield put({ type: GET_PACKAGEINFO_FAILURE, payload: error.messsage });
+    yield put({ type: GET_PACKAGEINFO_FAILURE, payload: (error as any).messsage });
   }
 }
 

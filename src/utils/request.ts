@@ -46,7 +46,7 @@ instance.interceptors.response.use(
           .catch((err) => {
             isRefreshing = false;
             retryTokenTimes += 1;
-            console.log(`getToken catch error ${err.message}`);
+            console.error(`getToken catch error ${err.message}`);
           });
       }
       if (isRefreshing && retryTokenTimes < 3) {
@@ -74,8 +74,8 @@ instance.interceptors.request.use((config) => {
   // 请求REQUEST_ID url timestamp 上报
   try {
     config.headers[TOKEN_HEADER] = window.localStorage.getItem(TOKEN_HEADER) || '';
-  } catch (error) {
-    console.log(error.message);
+  } catch (err) {
+    console.error((err as any).message);
   }
 
   return config;
