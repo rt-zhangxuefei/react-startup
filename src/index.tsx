@@ -1,19 +1,19 @@
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.less';
 import * as serviceWorker from './serviceWorker';
-import configureStore from './store';
-
-const store = configureStore();
+import store from './app/store';
 
 ReactDOM.render(
   <Provider store={store}>
     <ConfigProvider locale={zhCN}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ConfigProvider>
   </Provider>,
   document.getElementById('root'),

@@ -1,20 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './layouts/Layout';
+import Counter from './pages/counter/Counter';
 import { CONTEXT } from './config';
-import BasicLayout from './layouts/BasicLayout';
-import PackageInfo from './pages/PackageInfo/PackageInfo';
 
 function App() {
   return (
-    <Router>
-      <BasicLayout>
-        <Switch>
-          <Route exact path={`${CONTEXT}/`}>
-            <PackageInfo></PackageInfo>
-          </Route>
-        </Switch>
-      </BasicLayout>
-    </Router>
+    <>
+      <Routes>
+        <Route path={CONTEXT} element={<Layout />}>
+          <Route path="counter" element={<Counter />}></Route>
+        </Route>
+      </Routes>
+    </>
   );
 }
 

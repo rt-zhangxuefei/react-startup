@@ -1,8 +1,8 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const CracoLessPlugin = require('craco-less');
+const CracoAntDesignPlugin = require('craco-antd');
 const WebpackBar = require('webpackbar');
 const ESLintPlugin = require('eslint-webpack-plugin');
-// const CracoLessPlugin = require('./craco/plugins/craco-less');
-const CracoAntDesignPlugin = require('./craco/plugins/craco-antd');
 const path = require('path');
 
 // Don't open the browser during development
@@ -17,6 +17,9 @@ module.exports = {
         : []),
       new ESLintPlugin(),
     ],
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   plugins: [
     // {

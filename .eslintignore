@@ -1,6 +1,5 @@
 /build
 /deploy
 /src/setupProxy.js
-/craco
 craco.config.js
 .*.js
