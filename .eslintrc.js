@@ -1,10 +1,23 @@
 module.exports = {
   extends: ['react-app', 'prettier'],
   rules: {
-    // your rules
-    'react-hooks/exhaustive-deps': 0,
-    'jsx-a11y/anchor-is-valid': 0,
-    'react/jsx-no-duplicate-props': 0,
-    'import/no-anonymous-default-export': 0,
+    indent: 0,
+    'default-case': 0,
+    'eol-last': 0,
+    'no-console': 0,
+    'no-plusplus': 0,
+    'no-script-url': 0,
+    'prefer-rest-params': 0,
+    'compat/compat': 0,
+    'class-methods-use-this': 0,
+    'react/no-access-state-in-setstate': 0,
+    'react/destructuring-assignment': 0,
+    'react/no-multi-comp': 0,
+    'react/no-array-index-key': 0,
+    'jsx-a11y/href-no-hash': 0,
+    'jsx-a11y/control-has-associated-label': 0,
+    'import/no-extraneous-dependencies': 0,
+    'react/jsx-no-constructed-context-values': 0,
+    'react/no-unstable-nested-components': 0,
   },
 };

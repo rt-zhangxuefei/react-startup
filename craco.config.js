@@ -16,10 +16,7 @@ module.exports = {
         ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
         : []),
       new ESLintPlugin(),
-    ],
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+    ]
   },
   plugins: [
     // {

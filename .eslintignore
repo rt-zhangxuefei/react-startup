@@ -3,3 +3,11 @@
 /src/setupProxy.js
 craco.config.js
 .*.js
+!.*.js
+~*
+es/**/*
+lib/**/*
+node_modules
+dist
+coverage
+**/*.d.ts

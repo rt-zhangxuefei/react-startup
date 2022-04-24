@@ -1,7 +1,7 @@
 import { Navigate, useLocation } from 'react-router-dom';
 
-export default function (props) {
-  let location = useLocation();
+function Authorized(props) {
+  const location = useLocation();
   // 校验权限
   const authorized = false;
   if (!authorized) {
@@ -9,3 +9,5 @@ export default function (props) {
   }
   return props.children;
 }
+
+export default Authorized;
