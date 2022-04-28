@@ -1,4 +1,5 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 // const CracoLessPlugin = require('craco-less');
 const CracoAntDesignPlugin = require('craco-antd');
 const WebpackBar = require('webpackbar');
@@ -13,10 +14,11 @@ module.exports = {
     plugins: [
       new WebpackBar({ profile: true }),
       ...(process.env.NODE_ENV === 'development'
-        ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
+        ? [new BundleAnalyzerPlugin({ openAnalyzer: false, analyzerPort: 8888 })]
         : []),
       new ESLintPlugin(),
-    ]
+      new AntdDayjsWebpackPlugin(),
+    ],
   },
   plugins: [
     // {
