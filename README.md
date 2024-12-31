@@ -1,5 +1,5 @@
-# React 项目脚手架精简版
-保持 React, React Router, Redux, CRACO 版本更新
+# React 项目极简版脚手架
+持续随 React, React Router, Redux, CRACO 更新而更新
 
 异步action使用redux官方推荐的thunk方式
 

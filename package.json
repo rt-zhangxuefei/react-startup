@@ -1,7 +1,7 @@
 {
   "name": "react-startup",
   "version": "1.0.0",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "start": "craco start",
     "build:beta": "dotenv -e .env.beta craco build",
