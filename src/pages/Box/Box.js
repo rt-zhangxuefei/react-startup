@@ -1,20 +1,22 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { createSelector } from 'reselect';
 
-import { fetchData, increment } from '../../store/slices/boxSlice';
+import { getResult } from '../../store/actions/box';
 import styles from './Box.module.less';
 
+const selectResult = createSelector(
+  (state) => state.box,
+  (box) => box.result
+);
+
 const Box = () => {
-  const count = useSelector((state) => state.box.value);
   const dispatch = useDispatch();
+  const result = useSelector(selectResult);
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(getResult());
   }, []);
-  return (
-    <div className={styles.Box} onClick={() => dispatch(increment())}>
-      {count}
-    </div>
-  );
+  return <div className={styles.Box}>{result || 'loading'}</div>;
 };
 
 export default Box;

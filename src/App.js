@@ -12,11 +12,11 @@ const router = createHashRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: 'search-box',
-        element: <Box></Box>,
-      },
-    ],
-  },
+        path: '/example',
+        element: <Box></Box>
+      }
+    ]
+  }
 ]);
 
 function App() {

@@ -2,7 +2,7 @@ const CracoLessPlugin = require('craco-less');
 
 module.exports = {
   devServer: {
-    port: 3001
+    port: 3002
   },
   webpack: {
     alias: {
