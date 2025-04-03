@@ -19,6 +19,5 @@
 - dayjs 日期处理
 - lodash-es 工具
 - nanoid 唯一ID
-- [ahooks](https://ahooks.js.org/zh-CN) 有用的hooks
 - ant-design UI库（按需引入，推荐使用）
 - [react-contextmenu-lite](https://github.com/rt-zhangxuefei/react-contextmenu) 右键菜单
