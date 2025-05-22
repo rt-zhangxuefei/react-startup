@@ -6,6 +6,9 @@
 
 追求简洁，易用，减少各种心智负担，可以作为一个基础的模板，在这个上面可以搭建业务项目
 
+# 环境变量
+REACT_APP_USE_HASH_ROUTE：是否使用哈希路由
+
 # 常用的npm包
 - [React](https://react.dev/)
 - [React Router](https://reactrouter.com/)
