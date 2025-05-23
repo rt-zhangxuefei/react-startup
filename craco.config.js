@@ -23,6 +23,10 @@ module.exports = {
           }
         });
       }
+      if (!webpackConfig.resolve) {
+        webpackConfig.resolve = {};
+      }
+      webpackConfig.resolve.fullySpecified = false;
       return webpackConfig;
     }
   },

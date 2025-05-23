@@ -16,7 +16,7 @@ const Box = () => {
   useEffect(() => {
     dispatch(getResult());
   }, []);
-  return <div className={styles.Box}>{result || 'loading'}</div>;
+  return <div className={styles.Box}>{result || 'loading...'}</div>;
 };
 
 export default Box;
