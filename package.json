@@ -6,7 +6,7 @@
     "start": "craco start",
     "build:beta": "dotenv -e .env.beta craco build",
     "build:prod": "dotenv -e .env.prod craco build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
