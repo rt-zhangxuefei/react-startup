@@ -23,7 +23,7 @@ const router = createRouter([
 ]);
 
 function App() {
-  const  a = 1;
+  const  a =  1;
   return <RouterProvider router={router} />;
 }
 
