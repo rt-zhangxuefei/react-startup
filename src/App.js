@@ -15,7 +15,7 @@ const router = createRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/example',
+        path: '/box',
         element: <Box></Box>
       }
     ]
