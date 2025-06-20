@@ -1,4 +1,6 @@
-# React 项目极简版脚手架
+⚠️ 由于官方的CRA脚手架已经不在更新，我使用vite重新改造，构建更快,推荐使用这个 [react-start-vite](https://github.com/rt-zhangxuefei/react-startup-vite)
+
+# React项目极简版脚手架
 持续随 React, React Router, Redux, Redux-Saga, CRACO, less 更新而更新
 
 异步action推荐使用Redux-Saga，为什么？
@@ -10,7 +12,7 @@
 REACT_APP_USE_HASH_ROUTE：是否使用哈希路由
 
 # 常用的npm包
-- [React](https://react.dev/)
+- [React](https://react.dev/
 - [React Router](https://reactrouter.com/)
 - [Redux](https://redux.js.org/)
 - [CRACO](https://craco.js.org/)
